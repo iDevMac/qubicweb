@@ -5,7 +5,7 @@ import NotFound from "./views/NotFound";
 import GuestLayout from "./components/GuestLayout";
 const router = createBrowserRouter([
     {
-        path : "/",
+        path : "/home",
         element : <DefaultLayout/>,
         children : [
             {

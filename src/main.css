@@ -1,0 +1,23 @@
+.trending{
+    max-width: 100%;
+    background-color: #e87528;
+}
+
+
+@media (max-width: 640px) {
+    .trending{
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .trending{
+        display: none;
+    }
+}
+@media (max-width: 834px) {
+    .trending{
+        max-width: 100%;
+        padding: auto 10px;
+    }
+}
