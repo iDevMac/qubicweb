@@ -4,12 +4,12 @@ import topbanner from "../../assets/img/topbanner.png"
 
 function TopBar() {
   return (
-    <div className='container mx-auto min-h-20 w-full flex justify-between items-center'>
-      <div className='flex justify-center align-center min-w-70'>
+    <div className='container mx-auto w-full justify-between items-center topbar border'>
+      <div className='flex justify-center align-center min-w-60 topbarlogo'>
         <img src={toplogo} alt="Logo" />
       </div>
-      <div className='min-w-30'>
-        <img src={topbanner} alt="" className='' />
+      <div className='topbarbanner'>
+        <img src={topbanner} alt="" className='w-full' />
       </div>
     </div>
   )
