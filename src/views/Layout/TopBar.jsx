@@ -4,8 +4,8 @@ import topbanner from "../../assets/img/topbanner.png"
 
 function TopBar() {
   return (
-    <div className='container mx-auto w-full justify-between items-center topbar border'>
-      <div className='flex justify-center align-center min-w-60 topbarlogo'>
+    <div className='container mx-auto w-full justify-between items-center topbar'>
+      <div className='flex justify-center align-center topbarlogo'>
         <img src={toplogo} alt="Logo" />
       </div>
       <div className='topbarbanner'>
