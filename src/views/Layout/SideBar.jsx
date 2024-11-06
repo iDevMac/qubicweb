@@ -1,6 +1,6 @@
 import React from 'react'
 import { IoMdClose } from "react-icons/io";
-import { FaUserCircle, FaCaretDown, FaSearch, FaMoon, FaSun } from "react-icons/fa";
+import { FaCaretDown, FaMoon, FaSun } from "react-icons/fa";
 
 function SideBar() {
 

@@ -3,9 +3,8 @@ import { IoMenuOutline } from "react-icons/io5";
 import { WiDegrees } from "react-icons/wi";
 import { FaCloudRain } from "react-icons/fa6";
 import { IoMdPartlySunny } from "react-icons/io";
-import { FaUserCircle, FaCaretDown, FaSearch, FaMoon, FaSun } from "react-icons/fa";
-import SideBar from './SideBar';
-import axiosClient from '../../axios-client';
+import { FaUserCircle, FaCaretDown, FaSearch} from "react-icons/fa";
+
 
 function Navbar() {
   const [error, setError] = useState(null)
