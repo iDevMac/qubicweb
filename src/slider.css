@@ -1,0 +1,28 @@
+.newsbar .slider{
+    position: relative;
+    z-index: -1;
+}
+
+@media screen and (max-width: 640px) {
+    .featured{
+        height: 250px;
+    }
+
+    .featured{
+        position: relative;
+        top: 370px;
+        /* z-index: -1; */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .featured{
+        height: 250px;
+    }
+
+    .featured{
+        position: relative;
+        top: 370px;
+        /* z-index: -1; */
+    }
+}

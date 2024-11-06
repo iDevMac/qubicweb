@@ -39,10 +39,12 @@ function NewsBar() {
   };
 
 
+
   return (
     <div className='container mx-auto text-gray-300 newsbar'>
       <div className=''>
         <Carousel
+            className='slider'
             swipeable={false}
             draggable={false}
             // showDots={true}
@@ -103,7 +105,7 @@ function NewsBar() {
         <div className='col-md-8 right h-full'>
           <iframe 
             className='w-full video img-thumbnail' 
-            src="https://www.youtube.com/embed/kPRhMNHDjvI?si=R37QxKXwpthLEciD" 
+            src="https://www.youtube.com/embed/CZEFrqa3FFA?si=pUi8dKDXQ0yiPP4P" 
             title="YouTube video player" 
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 

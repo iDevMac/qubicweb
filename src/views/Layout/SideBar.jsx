@@ -11,7 +11,7 @@ function SideBar() {
   return (
     <div className='sidebar z-8'>
         <div className='flex justify-end'>
-            <IoMdClose onClick={onClose} className='text-2xl m-4 hover:opacity-8 '/>
+            <IoMdClose onClick={onClose} className='text-2xl text-red-500 m-4 hover:opacity-8 '/>
         </div>
         <div className='w-30'>
             <a href="#" className='flex justify-center items-center'>Home <FaCaretDown/></a>

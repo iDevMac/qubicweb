@@ -9,7 +9,6 @@ function Home() {
     <div className='home'>
       <NewsBar/>
       <Featured/>
-      
     </div>
   )
 }

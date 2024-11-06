@@ -63,8 +63,12 @@
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
     .topbarlogo{
-        width: 60%;
+        width: 200px;
+        /* height: 50px; */
         margin-bottom: 2rem;
+    }
+    .topbarlogo img{
+        width: 100%;
     }
     .topbarbanner{
         width: 0%;
@@ -112,6 +116,11 @@
     .navbar .navlink{
         display: none;
     }
+
+    .navbar .right .d-2{
+        display: none;
+    }
+    /* .navbar  */
     .leftbaricon{
         display: block;
     }
@@ -138,13 +147,15 @@
 
 .sidebar{
     position: fixed;
-    top: -90px;
+    top: 0;
     left: 0;
     width: 200px;
     height: 100vh;
     z-index: 9;
     display: none;
-    background-color: rgb(21, 21, 21);
+    transition-delay: 1s;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 0 4px rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
 }
 
 @media (max-width: 640px) {
@@ -159,6 +170,7 @@
 /* Body  */
 .home{
     opacity: 3;
+    height: 100vh;
 }
 
 .newsbar{
@@ -195,7 +207,7 @@
 
 
 .newsbar .right .video{
-    height: 400px;
+    height: 450px;
 }
 
 @media (max-width: 640px) {
@@ -231,8 +243,11 @@
      }
 }
 
-.featured img{
+.featured{
+    position: relative;
     /* width: 100%; */
+    height: 300px;
+    margin-top: 20px;
 }
 
 .featured .slider-item, .featured .bottom .tab-item{
@@ -286,6 +301,38 @@
     margin-left: 200px;
     background-color: #e87528;
     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(212, 212, 212, 0.19);
+}
+
+.chat-forum .notify-1{
+    position: absolute;
+    top: -10px;
+    right: 40px;
+    width: 25px;
+    height: 25px;
+    color: #e87528;
+    border-radius: 50%;
+    display: flex;
+    font-size: 17px;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.chat-forum .notify-2{
+    position: absolute;
+    top: -17px;
+    left: -10px;
+    width: 35px;
+    height: 35px;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    font-size: 20px;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+    background-color: #e87528;
 }
 
 .chat-body{

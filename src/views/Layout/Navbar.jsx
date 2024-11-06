@@ -43,7 +43,7 @@ function Navbar() {
 
   return (
     <div className='container mx-auto w-full flex justify-between items-center navbar'>
-      <div className='navlink space-x-5 items-center w-70'>
+      <div className='navlink space-x-5 items-center w-70 left'>
         <a href="#" className='flex justify-center items-center'>Home <FaCaretDown/></a>
         <a href="#" className='flex justify-center items-center'>Home <FaCaretDown/></a>
         <a href="#" className='flex justify-center items-center'>Home <FaCaretDown/></a>
@@ -54,8 +54,8 @@ function Navbar() {
       <div className='leftbaricon'>
         <IoMenuOutline onClick={onOpen}/>
       </div>
-      <SideBar/>
-      <div className='w-30 flex space-x-3 justify-center items-center'>
+      
+      <div className='w-30 flex space-x-3 justify-center items-center right'>
         <div className='flex justify-center items-center space-x-2'>
           {/* <FaSun onClick={turnOnDay}/>
           <FaMoon/> */}
@@ -63,13 +63,13 @@ function Navbar() {
         <div><FaSearch/> </div>
         <div className=''><FaUserCircle/></div>
             {/* divider */}
-            <div className='border-r-2 h-6 mx-3 border-gray-600'></div>
+            <div className='border-r-2 h-6 ml-2 border-gray-600 d-1'></div>
         <div className='flex justify-center items-center space-x-1'>
           <div>English</div>
           <FaCaretDown/>
         </div>
             {/* divider */}
-            <div className='border-r-2 h-6 mx-3 border-gray-600'></div>
+            <div className='border-r-2 h-6 mx-3 border-gray-600 d-2'></div>
         <div className='weather'>
           {
             weatherData

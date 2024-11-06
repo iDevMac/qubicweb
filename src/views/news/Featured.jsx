@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import "../../slider.css"
 import newsbarphotocover1 from "../../assets/img/newsbar/photo.jpg"
 import newsbarphotocover2 from "../../assets/img/newsbar/photo2.jpg"
 import newsbarphotocover3 from "../../assets/img/newsbar/photo3.jpeg"
@@ -27,6 +28,15 @@ function Featured() {
         }
       };
     
+      const CustomLeftArrow = ({ onClick, ...rest }) => {
+        const {
+          onMove,
+          carouselState: { currentSlide, deviceType }
+        } = rest;
+        // onMove means if dragging or swiping in progress.
+        return <button onClick={() => onClick()} />;
+      };
+
       const CustomRightArrow = ({ onClick, ...rest }) => {
         const {
           onMove,
@@ -58,12 +68,14 @@ function Featured() {
   return (
     <div className='container mx-auto featured'>
         <h3>Featured News</h3>
-      <div class="w-full relative">
+      <div class="w-full">
         <Carousel
+            className='slider'
             swipeable={false}
             draggable={false}
             // showDots={true}
-            customLeftArrow={<CustomRightArrow />}
+            customLeftArrow={<CustomLeftArrow />}
+            customRightArrow={<CustomRightArrow />}
             responsive={responsive}
             ssr={true} // means to render carousel on server-side.
             infinite={true}

@@ -40,15 +40,24 @@ function GuestLayout() {
           <TopBar/>
           <Navbar/>
         </div>
-
+        <SideBar/>
           <Outlet/>
             <div className='chat-forum'>
-                <button onClick={openChat} className='flex justify-center items-center chat-btn text-2xl'>
-                    <MdChat/>
-                </button>
+                <div className='flex justify-center items-center text-2xl chat-btn'>
+                  <button onClick={openChat} className=''>
+                      <MdChat/>
+                  </button>
 
+                  <div className='notify-1'>
+                      1
+                  </div>
+                </div>
+                
                 <div className='chat-body'>
                   <div className='card card-header'>
+                  <div className='notify-2'>
+                      1
+                  </div>
                     <div className='flex justify-between items-center '>
                       <div className='text-gray-500'>Discussion Forum</div>
                       <div className='space-x-2'>
