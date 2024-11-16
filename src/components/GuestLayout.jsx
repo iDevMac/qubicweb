@@ -4,7 +4,6 @@ import TopBar from '../views/Layout/TopBar'
 import TrendBar from '../views/Layout/TrendBar'
 import Navbar from '../views/Layout/Navbar'
 import SideBar from '../views/Layout/SideBar'
-import ChatForum from '../views/chat/ChatForum'
 
 
 function GuestLayout() {
@@ -17,8 +16,9 @@ function GuestLayout() {
           <Navbar/>
         </div>
         <SideBar/>
-          <Outlet/>
-        <ChatForum/>
+
+        {/* The body content */}
+        <Outlet/>
     </div>
   )
 }

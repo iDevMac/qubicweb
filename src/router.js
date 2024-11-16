@@ -3,6 +3,7 @@ import DefaultLayout from "./components/DefaultLayout";
 import Home from "./views/Home";
 import NotFound from "./views/NotFound";
 import GuestLayout from "./components/GuestLayout";
+import NewsPage from "./views/news/NewsPage";
 const router = createBrowserRouter([
     {
         path : "/home",
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
             {
                 path : "/",
                 element : <Home/>
+            },
+            {
+                path : "/newspage/:id",
+                element : <NewsPage/>
             }
         ]
     },

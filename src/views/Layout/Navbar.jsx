@@ -4,6 +4,7 @@ import { WiDegrees } from "react-icons/wi";
 import { FaCloudRain } from "react-icons/fa6";
 import { IoMdPartlySunny } from "react-icons/io";
 import { FaUserCircle, FaCaretDown, FaSearch} from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 
 function Navbar() {
@@ -37,18 +38,18 @@ function Navbar() {
 
   const onOpen = () => {
     document.querySelector(".sidebar").style.display = "block"
-    
+    document.querySelector(".sidelink").style.display = "block"
+    document.querySelector(".sideicon").style.display = "block"
+    document.querySelector(".sidebar").classList.remove("sidebar-minimize")
   }
 
   return (
     <div className='container mx-auto w-full flex justify-between items-center navbar'>
       <div className='navlink space-x-5 items-center w-70 left'>
-        <a href="#" className='flex justify-center items-center'>Home <FaCaretDown/></a>
-        <a href="#" className='flex justify-center items-center'>Home <FaCaretDown/></a>
-        <a href="#" className='flex justify-center items-center'>Home <FaCaretDown/></a>
-        <a href="#" className='flex justify-center items-center'>Home <FaCaretDown/></a>
-        <a href="#" className='flex justify-center items-center'>Home <FaCaretDown/></a>
-        <a href="#" className='flex justify-center items-center'>Home <FaCaretDown/></a>
+        <Link to="/" className='flex justify-center items-center'>Home</Link>
+        <Link to="#" className='flex justify-center items-center'>Agregator <FaCaretDown/></Link>
+        <Link to="#" className='flex justify-center items-center'>Awareness Material <FaCaretDown/></Link>
+        <Link to="#" className='flex justify-center items-center'>Blog <FaCaretDown/></Link>
       </div>
       <div className='leftbaricon'>
         <IoMenuOutline onClick={onOpen}/>
@@ -68,7 +69,7 @@ function Navbar() {
           <FaCaretDown/>
         </div>
             {/* divider */}
-            <div className='border-r-2 h-6 mx-3 border-gray-600 d-2'></div>
+            <div className='border-r-2 h-6 ml-2 border-gray-600 d-2'></div>
         <div className='weather'>
           {
             weatherData

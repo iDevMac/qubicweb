@@ -2,12 +2,48 @@ import React from 'react'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "../../slider.css"
+import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
+
 import newsbarphotocover1 from "../../assets/img/newsbar/photo.jpg"
 import newsbarphotocover2 from "../../assets/img/newsbar/photo2.jpg"
 import newsbarphotocover3 from "../../assets/img/newsbar/photo3.jpeg"
 import { useEffect } from 'react';
 
 function Featured() {
+
+    const sliderData = [
+      {
+        image: newsbarphotocover1,
+        title: "Lorem Ipsum.",
+        desc: "Lorem Ipsum has been the industry's."
+      },
+      {
+        image: newsbarphotocover2,
+        title: "Lorem Ipsum.",
+        desc: "Lorem Ipsum has been the industry's."
+      },
+      {
+        image: newsbarphotocover3,
+        title: "Lorem Ipsum.",
+        desc: "Lorem Ipsum has been the industry's."
+      },
+      {
+        image: newsbarphotocover1,
+        title: "Lorem Ipsum.",
+        desc: "Lorem Ipsum has been the industry's."
+      },
+      {
+        image: newsbarphotocover3,
+        title: "Lorem Ipsum.",
+        desc: "Lorem Ipsum has been the industry's."
+      },
+      {
+        image: newsbarphotocover3,
+        title: "Lorem Ipsum.",
+        desc: "Lorem Ipsum has been the industry's."
+      }
+      
+    ]
 
     const responsive = {
         desktop: {
@@ -25,24 +61,6 @@ function Featured() {
           items: 1,
           slidesToSlide: 1 // optional, default to 1.
         }
-      };
-    
-      const CustomLeftArrow = ({ onClick, ...rest }) => {
-        const {
-          onMove,
-          carouselState: { currentSlide, deviceType }
-        } = rest;
-        // onMove means if dragging or swiping in progress.
-        return <button onClick={() => onClick()} />;
-      };
-
-      const CustomRightArrow = ({ onClick, ...rest }) => {
-        const {
-          onMove,
-          carouselState: { currentSlide, deviceType }
-        } = rest;
-        // onMove means if dragging or swiping in progress.
-        return <button onClick={() => onClick()} />;
       };
 
       useEffect(() => {
@@ -64,6 +82,17 @@ function Featured() {
             }
       }, [])
 
+      const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
+        const { carouselState: { currentSlide } } = rest;
+        return (
+          <div className="carousel-button-group bg-slate-800">
+            <FaChevronLeft className={currentSlide === 0 ? 'disable' : ''} onClick={() => previous()} />
+            <FaChevronRight onClick={() => next()} />
+            {/* <FaChevronLeft onClick={() => goToSlide(currentSlide + 1)}> Go to any slide </ButtonThree> */}
+          </div>
+        );
+      };
+
   return (
     <div className='container mx-auto featured'>
         <h3>Featured News</h3>
@@ -73,15 +102,15 @@ function Featured() {
             swipeable={false}
             draggable={false}
             // showDots={true}
-            customLeftArrow={<CustomLeftArrow />}
-            customRightArrow={<CustomRightArrow />}
+            customButtonGroup={<ButtonGroup />}
+            // customRightArrow={<CustomRightArrow />}
             responsive={responsive}
             ssr={true} // means to render carousel on server-side.
             infinite={true}
             autoPlay={true}
-            autoPlaySpeed={2000}
+            autoPlaySpeed={4000}
             keyBoardControl={true}
-            customTransition="all .7"
+            customTransition="all 2s"
             transitionDuration={700}
             containerClass="carousel-container"
             removeArrowOnDeviceType={["tablet", "mobile"]}
@@ -90,41 +119,18 @@ function Featured() {
             itemClass="carousel-item-padding-40-px"
           >
 
-            <div className='justify-center items-center slider-item -z-1'>
-              <img src={newsbarphotocover1} alt="" className='min-w-4 min-h-10 -z-5' />
-              <div className='ml-2 writeup'>
-                <h5 className='text-gray-400'>Lorem Ipsum.</h5>
-                <p className='text-gray-500 overflow-x-hidden ellipsis min-h-20'>Lorem Ipsum has been the industry's.</p>
-              </div>
-            </div>
-            <div className='justify-center items-center slider-item -z-1' >
-              <img src={newsbarphotocover2} alt="" className='min-w-4 min-h-10' />
-              <div className='ml-2 writeup'>
-                <h5 className='text-gray-400'>Lorem Ipsum.</h5>
-                <p className='text-gray-500 overflow-x-hidden ellipsis min-h-20'>Lorem Ipsum has been the industry's.</p>
-              </div>
-            </div>
-            <div className='justify-center items-center slider-item  mr-2 -z-1'>
-              <img src={newsbarphotocover3} alt="" className='min-w-10 min-h-10' />
-              <div className='ml-2 writeup'>
-                <h5 className='text-gray-400'>Lorem Ipsum.</h5>
-                <p className='text-gray-500 overflow-x-hidden ellipsis min-h-20'>Lorem Ipsum has been the industry's.</p>
-              </div>
-            </div>
-            <div className='justify-center items-center slider-item -z-1' >
-              <img src={newsbarphotocover2} alt="" className='min-w-4 min-h-10' />
-              <div className='ml-2 writeup'>
-                <h5 className='text-gray-400'>Lorem Ipsum.</h5>
-                <p className='text-gray-500 overflow-x-hidden ellipsis min-h-20'>Lorem Ipsum has been the industry's.</p>
-              </div>
-            </div>
-            <div className='justify-center items-center slider-item -z-1' >
-              <img src={newsbarphotocover1} alt="" className='min-w-4 min-h-10' />
-              <div className='ml-2 writeup'>
-                <h5 className='text-gray-400'>Lorem Ipsum.</h5>
-                <p className='text-gray-500 overflow-x-hidden ellipsis min-h-20'>Lorem Ipsum has been the industry's.</p>
-              </div>
-            </div>
+            {
+              sliderData?.map((item, i) => (
+                <div className='justify-center items-center slider-item -z-1 space-x-2' key={i}>
+                  <img src={item.image} alt="" className='min-w-4 min-h-10 -z-5' />
+                  <div className='ml-2 writeup'>
+                    <h5 className='text-gray-400'>{item.title}</h5>
+                    <p className='text-gray-500 overflow-x-hidden ellipsis min-h-20'>{item.desc}</p>
+                  </div>
+                </div>
+              ))
+            }
+
         </Carousel>
       </div>
     </div>

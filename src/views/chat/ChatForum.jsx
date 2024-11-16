@@ -41,7 +41,7 @@ function ChatForum() {
     <div className='chat-forum'>
         <div className='flex justify-center items-center text-2xl chat-btn'>
           <button onClick={openChat} className=''>
-              <MdChat/>
+              <MdChat className='text-white'/>
           </button>
 
           <div className='notify-1'>
