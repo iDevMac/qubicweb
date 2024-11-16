@@ -10,13 +10,14 @@ function AI() {
       const getNewsApi = async () => {
         const response = await axios.get(`https://newsapi.org/v2/everything?q=artificial+intelligence+OR+AI&language=en&apiKey=${process.env.REACT_APP_NEWS_API}`)
         .then((response) => {
-            // console.log(response);
             setAi(response ? response.data : {})
         })
         .catch(err => {
           console.log(err);
           
         })
+        console.log(response);
+        
       }
   
       getNewsApi()
