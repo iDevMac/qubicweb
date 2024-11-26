@@ -10,6 +10,7 @@ import DataAnalysis from './news/DataAnalysis'
 import Footer from './Layout/Footer'
 import ChatForum from './chat/ChatForum'
 import Trending from './news/Trending'
+import Videos from './news/Videos'
 
 
 function Home() {
@@ -28,6 +29,7 @@ function Home() {
         </div>
       </div>
       <Trending/>
+      <Videos/>
       <ChatForum/>
       <Footer/>
     </div>

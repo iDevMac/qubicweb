@@ -27,7 +27,7 @@ const [devOps, setDevOps] = useState()
 
   return (
     <div className='col-md-4 category'>
-      <div className='border-b-2 border-black text-2xl mb-3'>DevOps</div>
+      <div className='border-b-2 border-black text-2xl mb-3 header'>DevOps</div>
           {
             devOps 
             &&

@@ -45,11 +45,11 @@ function Navbar() {
 
   return (
     <div className='container mx-auto w-full flex justify-between items-center navbar'>
-      <div className='navlink space-x-5 items-center w-70 left'>
-        <Link to="/" className='flex justify-center items-center'>Home</Link>
-        <Link to="#" className='flex justify-center items-center'>Agregator <FaCaretDown/></Link>
-        <Link to="#" className='flex justify-center items-center'>Awareness Material <FaCaretDown/></Link>
-        <Link to="#" className='flex justify-center items-center'>Blog <FaCaretDown/></Link>
+      <div className='navlink space-x-5 items-center w-70 left '>
+        <Link to="/" className='flex justify-center items-center text-orange-600'>Home</Link>
+        <Link to="#" className='flex justify-center items-center text-orange-600'>Awareness Material <FaCaretDown/></Link>
+        <Link to="#" className='flex justify-center items-center text-orange-600'>About Us <FaCaretDown/></Link>
+        <Link to="#" className='flex justify-center items-center text-orange-600'>Blog <FaCaretDown/></Link>
       </div>
       <div className='leftbaricon'>
         <IoMenuOutline onClick={onOpen}/>
@@ -75,7 +75,7 @@ function Navbar() {
             weatherData
             &&
             <div className='flex justify-center items-center'>
-              <div className='text-3xl'>{weatherData?.timelines.daily[0].values.temperatureMax >= 20 ? <IoMdPartlySunny/> : <FaCloudRain/>}</div>
+              <div className='text-3xl'>{weatherData?.timelines.daily[0].values.temperatureMax >= 31 ? <IoMdPartlySunny/> : <FaCloudRain/>}</div>
               <div className='ml-3'>
                 <div className='flex justify-center'>{weatherData?.timelines.daily[0].values.temperatureMax}<WiDegrees className='celcius'/>C</div>
                 <div className='text-sm text-gray-500'>{weatherData?.location?.name}</div>

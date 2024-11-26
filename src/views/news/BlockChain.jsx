@@ -26,7 +26,7 @@ function BlockChain() {
 
   return (
     <div className='col-md-4 category'>
-      <div className='border-b-2 border-black text-2xl mb-3 '>Blockchain</div>
+      <div className='border-b-2 border-black text-2xl mb-3 header'>Blockchain</div>
           {
             blockChain
             && 

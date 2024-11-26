@@ -159,53 +159,53 @@ function NewsPage() {
   return (
     <>
       <div className='container mx-auto newspage'>
-      <h1>{techNews && techNews.articles[id.split(";")[1]].title}</h1>
+        <h1 className='text-orange-600'>{techNews && techNews.articles[id.split(";")[1]].title}</h1>
 
-      <div className='mt-4 text-gray-500'>Published on: {techNews && techNews.articles[id.split(";")[1]].publishedAt}</div>
-      
-      <div className='border-t-2 border-dashed mb-3'></div>
-      <div className='flex'>Author: <div className='text-blue-500 ml-1'> {techNews && techNews.articles[id.split(";")[1]].author}</div></div>
-      <div className='border-b-2 border-black mt-1'></div>
+        <div className='mt-4 text-gray-500'>Published on: {techNews && techNews.articles[id.split(";")[1]].publishedAt}</div>
+        
+        <div className='border-t-2 border-dashed mb-3'></div>
+        <div className='flex'>Author: <div className='text-blue-500 ml-1'> {techNews && techNews.articles[id.split(";")[1]].author}</div></div>
+        <div className='border-b-2 border-black mt-1'></div>
 
-      <div className='row mt-4'>
-        <div className='col-md-8 left'>
-          <div className='content'>
-            <div className='image-item'>
-              <img 
-                className='img-thumbnail h-[300px] newspage-image'
-                src={techNews && techNews.articles[id.split(";")[1]].urlToImage} 
-                alt={techNews && techNews.articles[id.split(";")[1]].title} 
-              />
-              <div className='share text-white'>
-                <div className='flex justify-between items-center'>
-                  <div>
-                      hsfidfiviudif
-                  </div>
+        <div className='row mt-4'>
+          <div className='col-md-8 left'>
+            <div className='content'>
+              <div className='image-item'>
+                <img 
+                  className='img-thumbnail h-[300px] newspage-image'
+                  src={techNews && techNews.articles[id.split(";")[1]].urlToImage} 
+                  alt={techNews && techNews.articles[id.split(";")[1]].title} 
+                />
+                <div className='share text-white'>
+                  <div className='flex justify-between items-center'>
+                    <div>
+                        hsfidfiviudif
+                    </div>
 
-                  <div className='share-icon' onClick={onShowMediaIcons}>
-                    <BsShare className='text-2xl'/>
+                    <div className='share-icon' onClick={onShowMediaIcons}>
+                      <BsShare className='text-2xl'/>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div className='social-media space-y-3'>
-                <FaInstagram onClick={onShareOnInstagram}/>
-                <FaTwitter onClick={onShareOnTwitter}/>
-                <FaFacebook onClick={onShareOnFacebook}/>
+                <div className='social-media space-y-3'>
+                  <FaInstagram onClick={onShareOnInstagram}/>
+                  <FaTwitter onClick={onShareOnTwitter}/>
+                  <FaFacebook onClick={onShareOnFacebook}/>
+                </div>
               </div>
-            </div>
-            <div className='space-y-2 mt-3'>
-              <h4 className='italic'>{techNews && techNews.articles[id.split(";")[1]].title}</h4>
-              <p>{techNews && techNews.articles[id.split(";")[1]].content}</p>
-              <p>{techNews && techNews.articles[id.split(";")[1]].description}</p>
+              <div className='space-y-2 mt-3'>
+                <h4 className='italic'>{techNews && techNews.articles[id.split(";")[1]].title}</h4>
+                <p>{techNews && techNews.articles[id.split(";")[1]].content}</p>
+                <p>{techNews && techNews.articles[id.split(";")[1]].description}</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className='col-md-4'>
+          <div className='col-md-4'>
 
+          </div>
         </div>
-      </div>
     </div>
     <Footer/>
     </>

@@ -28,7 +28,7 @@ function CyberSecurity() {
 
   return (
     <div className='col-md-4 category'>
-      <div className='border-b-2 border-black text-2xl mb-3 '>Cyber Crime</div>
+      <div className='border-b-2 border-black text-2xl mb-3 header'>Cyber Crime</div>
             {
               cyberSecurity
                 &&

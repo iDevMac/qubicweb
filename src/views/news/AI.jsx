@@ -16,7 +16,7 @@ function AI() {
           console.log(err);
           
         })
-        console.log(response);
+        // console.log(response);
         
       }
   
@@ -26,7 +26,7 @@ function AI() {
   
     return (
       <div className='col-md-4 category'>
-        <div className='border-b-2 border-black text-2xl mb-3 '>Artificial Intelligence</div>
+        <div className='border-b-2 border-black text-2xl mb-3 header'>Artificial Intelligence</div>
             {
                 ai
                 &&

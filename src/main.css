@@ -1,3 +1,6 @@
+.Guesttopwrapper h3{
+    color: #DB833D;
+  }
 @media (max-width: 640px) {
 .Guesttopwrapper{
         padding: 0 .7rem;
@@ -344,6 +347,9 @@
     margin-top: 10px;
 }
 
+.featured h3{
+    color: #DB833D;
+}
 
 .featured .slider-item{
     margin: 0 5px;
@@ -449,6 +455,10 @@
     height: 100px;
     margin-right: 5px;
     border-radius: 5px;
+}
+
+.category .header{
+    color: #DB833D;
 }
 
 .category h5{
@@ -638,6 +648,7 @@
 
 .trending-news .bottom{
     margin-top: 30px;
+    /* padding: 0 30px; */
 }
 
 .trending-news .bottom .tab-scroll{
@@ -683,6 +694,85 @@
     }
 
     .trending-news .bottom .tab img{
+        width: 200px;
+        height: 200px;
+    }
+}
+
+.video-news .top{
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 3px;
+    background-color: #fff;
+}
+
+.video-news .video-slider iframe{
+    width: 600px;
+    height: 400px;
+    margin: 7px auto;
+}
+
+.video-news .bgBlue{
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    bottom: -2950px;
+    background-color: #233340;
+    z-index: -1;
+}
+
+.video-news .bottom{
+    margin-top: 60px;
+    background-color: #fff;
+}
+
+.video-news .bottom iframe{
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+    bottom: 20px;
+}
+
+.video-news .bottom .tab-scroll{
+    height: 400px;
+    overflow-y: scroll;
+}
+
+.video-news .bottom .tab-item{
+    display: flex;
+
+}
+
+.video-news .bottom .tab img{
+    width: 100px;
+    height: 100px;
+    /* margin-left: 10px;
+    margin-top: 20px; */
+}
+
+@media (max-width: 768px) {
+    .video-news {
+        height: 200px;
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 800px) {
+    .video-news .carousel{
+        width: 700px;
+        height: 200px;
+        margin-top: 5px;
+    }
+
+    .video-news .carousel img{
+        /* width: 30px; */
+        height: 200px;
+        margin-top: 5px;
+    }
+
+    .video-news .bottom .tab img{
         width: 200px;
         height: 200px;
     }
@@ -893,6 +983,31 @@
     color: #fff;
     background-color: #e87528;
 }
+
+
+.footer .middle .middle-right .suggest input{
+    width: 100%;
+    height: 45px;
+    color: #233340;
+    padding: 0 7px;
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.footer .middle .middle-right .suggest button{
+    width: 100px;
+    height: 45px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #fff;
+    background-color: #e87528;
+}
+
 
 .footer .bottom{
     padding: 0 10px;

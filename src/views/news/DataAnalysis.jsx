@@ -26,7 +26,7 @@ function DataAnalysis() {
   
     return (
       <div className='col-md-4 category'>
-        <div className='border-b-2 border-black text-2xl mb-3 '>Data Analysis</div>
+        <div className='border-b-2 border-black text-2xl mb-3 header'>Data Analysis</div>
             {
               dataAnalysis
               && 
